@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## v0.7.0 (2024-08-26)
+
+### Feature
+
+* feat: updare ([`e72760b`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/e72760b110445af2a6a6c316de0470612993c17e))
+
+* feat: updare ([`9525940`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/9525940a2706f76c1f6f8306ee40bab3d1f2b9ac))
+
+### Fix
+
+* fix: updare ([`79a0dd8`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/79a0dd8ca87cca0f929868686d14358e4845e11f))
+
+* fix: updare ([`5d74bc4`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/5d74bc4aa3d10b697b51c92557c68462f3dd4c73))
+
+* fix: updare ([`69edc65`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/69edc65aa0cd661c2e5ef149f78957fe912cde4f))
+
 ## v0.6.0 (2024-08-26)
 
 ### Feature
