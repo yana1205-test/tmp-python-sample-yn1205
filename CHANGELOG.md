@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.3.0 (2024-08-26)
+
+### Feature
+
+* feat: update ([`bdc9b4a`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/bdc9b4aceeb8c30f4b28efb54f4e2fa1c9fa6750))
+
 ## v0.2.0 (2024-08-26)
 
 ### Feature
