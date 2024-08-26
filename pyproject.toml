@@ -62,3 +62,4 @@ max-line-length = 120
 [tool.semantic_release]
 version_variable = "pyproject.toml:version"
 version_source = "tag"
+branch = "main"
