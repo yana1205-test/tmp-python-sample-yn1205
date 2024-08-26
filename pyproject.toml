@@ -60,6 +60,6 @@ disable = ["W1203", "W1201"]
 max-line-length = 120
 
 [tool.semantic_release]
-version_variable = "pyproject.toml:version"
+version_toml = "pyproject.toml:project.version"
 version_source = "tag"
 branch = "main"
