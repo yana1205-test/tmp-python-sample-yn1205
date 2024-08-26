@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.4.0 (2024-08-26)
+
+### Feature
+
+* feat: update semantic_release ([`271d109`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/271d109ba63058ec5f100d7ff64095cb23b8fce9))
+
 ## v0.3.0 (2024-08-26)
 
 ### Feature
