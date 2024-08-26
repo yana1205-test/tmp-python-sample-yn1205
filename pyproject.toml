@@ -32,7 +32,7 @@ dependencies = [
 dev = [
   "build>=1.0.3",
   "pep8-naming",
-  "python-semantic-release==7.33.2",
+  "python-semantic-release>=9.3",
   "toml-cli",
   "types-PyYAML",
   "types-setuptools",
@@ -60,6 +60,6 @@ disable = ["W1203", "W1201"]
 max-line-length = 120
 
 [tool.semantic_release]
-version_toml = "pyproject.toml:project.version"
+version_variable = "pyproject.toml:project.version"
 version_source = "tag"
 branch = "main"
