@@ -18,6 +18,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -31,6 +32,12 @@ jobs:
       - name: Install build tools
         run: |
           make install-dev
+      - name: Sign the dists with Sigstore
+        uses: sigstore/gh-action-sigstore-python@v2.1.1
+        with:
+          inputs: >-
+            ./dist/*.tar.gz
+            ./dist/*.whl
       - name: Create release
         shell: bash
         run: |
@@ -39,3 +46,14 @@ jobs:
           semantic-release version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Download all the dists
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: python-package-distributions
+      #     path: dist/
+      # - name: Sign the dists with Sigstore
+      #   uses: sigstore/gh-action-sigstore-python@v2.1.1
+      #   with:
+      #     inputs: >-
+      #       ./dist/*.tar.gz
+      #       ./dist/*.whl
