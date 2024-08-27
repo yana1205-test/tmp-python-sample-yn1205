@@ -32,7 +32,7 @@ dependencies = [
 dev = [
   "build>=1.0.3",
   "pep8-naming",
-  "python-semantic-release>=9.3",
+  "python-semantic-release>=9.8",
   "toml-cli",
   "types-PyYAML",
   "types-setuptools",

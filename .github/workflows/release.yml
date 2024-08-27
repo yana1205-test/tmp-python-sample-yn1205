@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
@@ -34,6 +36,13 @@ jobs:
         run: |
           env
           echo "semantic-release..."
+          git status
+          git branch
+          git tag
+          echo "semantic-release..."
+          pip freeze
           git config --global user.name "semantic-release (via Github actions)"
           git config --global user.email "semantic-release@github-actions"
-          semantic-release version
+          semantic-release -v version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
