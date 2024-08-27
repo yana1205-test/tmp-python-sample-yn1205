@@ -122,7 +122,8 @@ jobs:
           python-version: '3.10'
       - name: Install
         run: |
-          pip install tmp-python-sample-yn1205==${{needs.build.outputs.release-tag}}
+          tag=${{needs.build.outputs.release-tag}}
+          pip install -i https://test.pypi.org/simple/ tmp-python-sample-yn1205==${tag:1}
           pip pytest
       - name: Run test
         run: make it
