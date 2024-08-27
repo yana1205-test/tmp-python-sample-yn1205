@@ -32,6 +32,9 @@ jobs:
       - name: Install build tools
         run: |
           make install-dev
+      - name: Build
+        run: |
+          make build
       - name: Sign the dists with Sigstore
         uses: sigstore/gh-action-sigstore-python@v2.1.1
         with:
