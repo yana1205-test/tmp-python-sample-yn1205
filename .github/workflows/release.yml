@@ -72,10 +72,6 @@ jobs:
           inputs: |
             ./dist/*.tar.gz
             ./dist/*.whl
-      - name: Debug
-        run: |
-          ls -l
-          ls dist
       - name: Publish package distributions to GitHub Releases
         uses: python-semantic-release/upload-to-gh-release@v9.8.0
         with:
