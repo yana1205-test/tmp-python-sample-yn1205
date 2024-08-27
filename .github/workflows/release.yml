@@ -13,15 +13,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  github-release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       packages: write
       id-token: write
-    environment:
-      name: release
-      url: https://pypi.org/p/tmp-python-sample-yn1205
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -53,27 +50,26 @@ jobs:
         uses: python-semantic-release/upload-to-gh-release@v9.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish package distributions to PyPI
+  publish-to-testpypi:
+    name: Publish Python 🐍 distribution 📦 to TestPyPI
+    needs:
+      - github-release
+    runs-on: ubuntu-latest
+
+    environment:
+      name: testpypi
+      url: https://pypi.org/p/tmp-python-sample-yn1205
+
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v3
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish distribution 📦 to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-      # - name: Create release
-      #   shell: bash
-      #   run: |
-      #     git config --global user.name "semantic-release (via Github actions)"
-      #     git config --global user.email "semantic-release@github-actions"
-      #     semantic-release version
-      #     semantic-release publish
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Download all the dists
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: python-package-distributions
-      #     path: dist/
-      # - name: Sign the dists with Sigstore
-      #   uses: sigstore/gh-action-sigstore-python@v2.1.1
-      #   with:
-      #     inputs: >-
-      #       ./dist/*.tar.gz
-      #       ./dist/*.whl
