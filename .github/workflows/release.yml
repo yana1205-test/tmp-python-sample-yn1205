@@ -34,4 +34,6 @@ jobs:
         run: |
           env
           echo "semantic-release..."
+          git config --global user.name "semantic-release (via Github actions)"
+          git config --global user.email "semantic-release@github-actions"
           semantic-release version
