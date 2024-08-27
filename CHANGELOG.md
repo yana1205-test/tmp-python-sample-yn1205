@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.9.0 (2024-08-27)
+
+### Chore
+
+* chore: release ([`4f9ac03`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/4f9ac034a73c8352766a53e24feef88e9636b867))
+
+### Feature
+
+* feat: update ([`1e86e61`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/1e86e61682c9e5fb542a9f5eea069f3452590e62))
+
+* feat: release ([`1f9b4df`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/1f9b4dfac694884748179aa1a461044fc01d45d9))
+
 ## v0.8.0 (2024-08-27)
 
 ### Feature
