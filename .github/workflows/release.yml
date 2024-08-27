@@ -14,6 +14,7 @@ on:
 
 jobs:
   build:
+    name: Semantic versioning and Build
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -50,11 +51,8 @@ jobs:
       - build
     runs-on: ubuntu-latest
 
-    environment:
-      name: testpypi
-      url: https://pypi.org/p/tmp-python-sample-yn1205
-
     permissions:
+      contents: write
       packages: write
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
