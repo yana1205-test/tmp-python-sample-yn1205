@@ -9,7 +9,7 @@ package-dir = { "tmp_python_sample_yn1205" = "tmp_python_sample_yn1205" }
 include = ["tmp_python_sample_yn1205*"]
 
 [project]
-version = "0.20.0"
+version = "0.21.0"
 name = "tmp-python-sample-yn1205"
 authors = [{ name = "foo", email = "bar@gmail.com" }]
 description = "Sample tmp_python_sample_yn1205"
