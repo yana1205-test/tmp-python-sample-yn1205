@@ -1,10 +1,20 @@
 # CHANGELOG
 
+
+
+## v0.12.0 (2024-08-27)
+
+### Feature
+
+* feat: update ([`75137e1`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/75137e13f8dd702e37f5dcadfdb78fb329163660))
+
+
 ## v0.11.0 (2024-08-27)
 
 ### Feature
 
 * feat: update ([`e488187`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/e48818764e698da632a77969af60269e409ae92b))
+
 
 ## v0.10.0 (2024-08-27)
 
@@ -20,6 +30,7 @@
 
 * feat: update ([`4f5a60f`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/4f5a60f5dc304d354e1433c8eb116409d5ebfcdb))
 
+
 ## v0.9.0 (2024-08-27)
 
 ### Chore
@@ -31,6 +42,7 @@
 * feat: update ([`1e86e61`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/1e86e61682c9e5fb542a9f5eea069f3452590e62))
 
 * feat: release ([`1f9b4df`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/1f9b4dfac694884748179aa1a461044fc01d45d9))
+
 
 ## v0.8.0 (2024-08-27)
 
@@ -46,11 +58,13 @@
 
 * fix: ci/cd ([`c587d01`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/c587d0186b0f7b64cc89f2c9274df5ad1d03e687))
 
+
 ## v0.7.1 (2024-08-26)
 
 ### Fix
 
 * fix: updare ([`f508693`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/f508693d75a38df8d73143f194d51e427c6ababa))
+
 
 ## v0.7.0 (2024-08-26)
 
@@ -68,6 +82,7 @@
 
 * fix: updare ([`69edc65`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/69edc65aa0cd661c2e5ef149f78957fe912cde4f))
 
+
 ## v0.6.0 (2024-08-26)
 
 ### Feature
@@ -78,11 +93,13 @@
 
 * update ([`a0e03d6`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/a0e03d69b3acd65e2caf1e4e5ac3ede61736b276))
 
+
 ## v0.5.0 (2024-08-26)
 
 ### Feature
 
 * feat: update ([`7a93cc7`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/7a93cc785a01d87549968422f6ac99cc88e91d2c))
+
 
 ## v0.4.0 (2024-08-26)
 
@@ -90,17 +107,20 @@
 
 * feat: update semantic_release ([`271d109`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/271d109ba63058ec5f100d7ff64095cb23b8fce9))
 
+
 ## v0.3.0 (2024-08-26)
 
 ### Feature
 
 * feat: update ([`bdc9b4a`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/bdc9b4aceeb8c30f4b28efb54f4e2fa1c9fa6750))
 
+
 ## v0.2.0 (2024-08-26)
 
 ### Feature
 
 * feat: update ([`b5bb48c`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/b5bb48ce6b36b5fe0c8cc957ffbdeebd85df937a))
+
 
 ## v0.1.0 (2024-08-26)
 
@@ -113,6 +133,7 @@
 * update ([`23c9eeb`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/23c9eebda4a4fbbcdf5ac78a7bb44b4b7795afb6))
 
 * update ([`4595e28`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/4595e28b809cdafcfb40e0f91e2c83e98b8252e9))
+
 
 ## v0.0.0 (2024-08-26)
 
