@@ -123,7 +123,7 @@ jobs:
       - name: Install
         run: |
           tag=${{needs.build.outputs.release-tag}}
-          pip install -i https://test.pypi.org/simple/ tmp-python-sample-yn1205==${tag:1}
+          pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple tmp-python-sample-yn1205==${tag:1}
           pip pytest
       - name: Run test
         run: make it
