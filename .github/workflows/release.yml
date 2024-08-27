@@ -34,15 +34,8 @@ jobs:
       - name: Create release
         shell: bash
         run: |
-          env
-          echo "semantic-release..."
-          git status
-          git branch
-          git tag
-          echo "semantic-release..."
-          pip freeze
           git config --global user.name "semantic-release (via Github actions)"
           git config --global user.email "semantic-release@github-actions"
-          semantic-release -v version
+          semantic-release version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
