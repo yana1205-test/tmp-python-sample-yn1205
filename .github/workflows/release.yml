@@ -48,6 +48,7 @@ jobs:
           git config --global user.name "semantic-release (via Github actions)"
           git config --global user.email "semantic-release@github-actions"
           semantic-release version
+          semantic-release publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # - name: Download all the dists
