@@ -2,6 +2,13 @@
 
 
 
+## v0.24.0 (2024-08-27)
+
+### Feature
+
+* feat: update ([`f3c3a62`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/f3c3a6208b0d56651b5c15a094a1937920c6b99a))
+
+
 ## v0.23.6 (2024-08-27)
 
 ### Fix
