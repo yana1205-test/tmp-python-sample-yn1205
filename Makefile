@@ -1,25 +1,20 @@
-PYTHON := $(shell pwd)/.venv/bin/python
+build:
+	python -m build
 
-.venv:
-	@echo Please create venv firstly
+install:
+	python -m pip install .
 
-build: .venv
-	@$(PYTHON) -m build
+install-dev:
+	python -m pip install ".[dev]"
 
-install: .venv
-	@$(PYTHON) -m pip install .
+format:
+	python -m isort .
+	python -m black .
 
-install-dev: .venv
-	@$(PYTHON) -m pip install ".[dev]"
+lint:
+	python -m pylint ./c2p ./tests
 
-format: .venv
-	@$(PYTHON) -m isort .
-	@$(PYTHON) -m black .
-
-lint: .venv
-	@$(PYTHON) -m pylint ./c2p ./tests
-
-clean: .venv
+clean:
 	@rm -rf build *.egg-info dist
 	@find ./plugins -type d \( -name '*.egg-info' -o -name 'dist' \) | while read x; do echo $$x; rm -r $$x ; done 
-	@$(PYTHON) -m pyclean -v .
+	python -m pyclean -v .
