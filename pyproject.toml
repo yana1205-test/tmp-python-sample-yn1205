@@ -40,12 +40,23 @@ dev = [
   "black",
   "isort",
   "pylint",
-  "pyclean"
+  "pyclean",
+  "pytest",
 ]
 
 [project.urls]
 Homepage = "https://github.com/yana1205-test/tmp-python-sample-yn1205"
 Issues = "https://github.com/yana1205-test/tmp-python-sample-yn1205/issues"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+pythonpath = ["tmp_python_sample_yn1205"]
 
 [tool.isort]
 profile = "black"
