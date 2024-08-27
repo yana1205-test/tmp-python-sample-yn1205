@@ -46,10 +46,11 @@ jobs:
           inputs: |
             ./dist/*.tar.gz
             ./dist/*.whl
-      - name: Publish package distributions to GitHub Releases
-        uses: python-semantic-release/upload-to-gh-release@v9.8.0
+      - name: Store the distribution packages
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          name: python-package-distributions
+          path: dist/
   publish-to-testpypi:
     name: Publish Python 🐍 distribution 📦 to TestPyPI
     needs:
