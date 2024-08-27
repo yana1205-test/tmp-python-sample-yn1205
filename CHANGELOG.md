@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.8.0 (2024-08-27)
+
+### Feature
+
+* feat: ci/cd ([`44a9f58`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/44a9f582f98e0f9311a9a544304bf6a84a67e15e))
+
+* feat: update ([`dbf2a76`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/dbf2a76ec792e00bfa8476a0c8fcd0490d27ceac))
+
+### Fix
+
+* fix: ci/cd tmp ([`8dc87f5`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/8dc87f559b67431efc6face5d14ea156e5326e64))
+
+* fix: ci/cd ([`c587d01`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/c587d0186b0f7b64cc89f2c9274df5ad1d03e687))
+
 ## v0.7.1 (2024-08-26)
 
 ### Fix
@@ -66,11 +80,11 @@
 
 * update ([`23c9eeb`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/23c9eebda4a4fbbcdf5ac78a7bb44b4b7795afb6))
 
+* update ([`4595e28`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/4595e28b809cdafcfb40e0f91e2c83e98b8252e9))
+
 ## v0.0.0 (2024-08-26)
 
 ### Unknown
-
-* update ([`4595e28`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/4595e28b809cdafcfb40e0f91e2c83e98b8252e9))
 
 * update ([`93cfe35`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/93cfe359f6ade517e1d98137086f13b519cc5d60))
 
