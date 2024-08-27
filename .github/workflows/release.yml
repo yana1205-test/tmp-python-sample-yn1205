@@ -67,10 +67,6 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: Download all the dists
         uses: actions/download-artifact@v3
         with:
@@ -82,11 +78,11 @@ jobs:
           inputs: |
             ./dist/*.tar.gz
             ./dist/*.whl
-      - name: Publish package distributions to GitHub Releases
-        uses: python-semantic-release/upload-to-gh-release@v9.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{needs.build.outputs.release-tag}}
+      - name: Upload package distributions to GitHub Releases
+        run: gh release upload ${{needs.build.outputs.release-tag}} ./dist/*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.REPOSITORY }}
 
   publish-to-testpypi:
     name: Publish to TestPyPI
