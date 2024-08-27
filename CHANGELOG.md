@@ -2,6 +2,13 @@
 
 
 
+## v0.23.1 (2024-08-27)
+
+### Fix
+
+* fix: update ([`dbee199`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/dbee1999bd6dd4169c294362e9dc9f4750283a94))
+
+
 ## v0.23.0 (2024-08-27)
 
 ### Feature
