@@ -11,6 +11,13 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      pre-release:
+        type: choice
+        required: true
+        options:
+          - 'true'
+          - 'false'
 
 jobs:
   build:
@@ -37,6 +44,7 @@ jobs:
         uses: python-semantic-release/python-semantic-release@v9.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          pre-release: ${{ github.event.inputs.pre-release }}
       - name: Build
         run: |
           make build
@@ -131,6 +139,7 @@ jobs:
 
   publish-to-pypi:
     name: Publish to PyPI
+    if: ${{ github.event.inputs.pre-release }} == 'false'
     needs:
       - build
       - test
