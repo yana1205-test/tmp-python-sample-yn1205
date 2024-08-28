@@ -34,7 +34,7 @@ jobs:
       - name: Check release
         if: steps.release.outputs.released == 'false'
         run: |
-          echo 'No release will be made'
+          echo 'No release will be made since there are no release commits. See also Commit Parsers configuration.'
           exit 1
       - name: Set up Python 3.10
         uses: actions/setup-python@v5
