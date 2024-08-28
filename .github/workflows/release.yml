@@ -159,7 +159,10 @@ jobs:
             echo "Check if ${version} is available or not ...$count"
             pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version}
             [[ "$?" -eq 0 ]] && break
-            [[ "$count" -gt 5 ]] && echo "Not found ${version}" && exit 1
+            if [[ "$count" -gt 5 ]];then
+              echo "Not found ${version}"
+              exit 1
+            fi
             sleep 5
           done
           pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version}
