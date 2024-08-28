@@ -2,6 +2,13 @@
 
 
 
+## v0.26.1 (2024-08-28)
+
+### Fix
+
+* fix: update ([`9fba544`](https://github.com/yana1205-test/tmp-python-sample-yn1205/commit/9fba544ff377d6f3fffeb68ddfaed119257f997d))
+
+
 ## v0.26.0 (2024-08-28)
 
 ### Feature
