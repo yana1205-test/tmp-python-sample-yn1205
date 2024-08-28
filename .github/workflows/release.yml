@@ -151,7 +151,7 @@ jobs:
           python-version: '3.10'
       - name: Install
         run: |
-          version=0.26.2
+          version=0.26.3
           version=${version/-rc./rc}
           count=0
           while :; do
