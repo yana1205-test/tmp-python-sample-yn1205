@@ -157,7 +157,9 @@ jobs:
           while :; do
             count=$(($count+1))
             echo "Check if ${version} is available or not ...$count"
-            [[ pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version} -eq 0 ]] && break
+            if pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version};then
+              break
+            fi
             [[ "$count" -gt 5 ]] && echo "Not found ${version}" && exit 1
             sleep 5
           done
