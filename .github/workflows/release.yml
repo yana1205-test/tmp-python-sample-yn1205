@@ -121,7 +121,18 @@ jobs:
       - name: Install
         run: |
           version=${{needs.build.outputs.release-version}}
-          pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple tmp-python-sample-yn1205==${version/-rc./rc}
+          version=${version/-rc./rc}
+          count=0
+          while :; do
+            count=$(($count+1))
+            echo "Check if ${version} is available or not ...$count"
+            pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version}
+            [[ $? -eq 0 ]] && break
+            [[ $count -gt 10 ]] && echo "Not found ${version}" && exit 1
+            sleep 5
+          done
+          pip index versions -i https://test.pypi.org/simple/ tmp-python-sample-yn1205 | grep ${version}
+          pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple tmp-python-sample-yn1205==${version}
           pip install pytest
       - name: Run test
         run: make it
