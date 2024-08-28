@@ -7,21 +7,14 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Release
+name: release
 
 on:
   workflow_dispatch:
-    inputs:
-      prerelease:
-        type: choice
-        required: true
-        options:
-          - 'true'
-          - 'false'
 
 jobs:
   build:
-    name: Semantic versioning and Build
+    name: Build with semantic versioning
     runs-on: ubuntu-latest
     outputs:
       release-tag: ${{ steps.release.outputs.tag }}
@@ -49,7 +42,6 @@ jobs:
       - name: Build
         run: |
           make build
-          ls dist
       - name: Store the distribution packages
         uses: actions/upload-artifact@v3
         with:
@@ -133,27 +125,3 @@ jobs:
           pip install pytest
       - name: Run test
         run: make it
-
-  publish-to-pypi:
-    name: Publish to PyPI
-    if: ${{ github.event.inputs.prerelease == 'false' }}
-    needs:
-      - build
-      - test
-    runs-on: ubuntu-latest
-
-    environment:
-      name: pypi
-      url: https://pypi.org/p/tmp-python-sample-yn1205
-
-    permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
-
-    steps:
-      - name: Download the distributions from release
-        run: gh release download ${{needs.build.outputs.release-tag}} -D dist -p '*.tar.gz' -p '*.whl'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.REPOSITORY }}
-      - name: Publish distribution 📦 to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
